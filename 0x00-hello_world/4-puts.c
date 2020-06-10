@@ -1,6 +1,5 @@
-# include <stdio .h>
+#include <stdio.h>
 main()
 {
-puts(""Programming is like building a multilingual puzzle\n");
-puts("0");
+puts("Programming is like building a multilingual puzzle\n");
 }
