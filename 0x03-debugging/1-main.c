@@ -11,11 +11,12 @@ int main(void)
 
         i = 0;
 
-/*Error en secuencia infinita*/while (i < 10)
-        {
-        putchar(i);
-        }
-
+/*Error en secuencia infini
+  *while (i < 10)
+  *{
+  * putchar(i);
+  *}
+  */
 	printf("Infinite loop avoided! \\o/\n");
 
 	return (0);
