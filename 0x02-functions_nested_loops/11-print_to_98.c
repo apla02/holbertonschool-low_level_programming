@@ -1,5 +1,6 @@
 #include "holberton.h"
 #include <stdlib.h>
+#include <stdio.h>
 /**
  * print_to_98 - print all natural numbers from n to 98
  * @n: number
@@ -7,11 +8,19 @@
  */
 void print_to_98(int n)
 {
-	for (n = 0; n >= 98; n++)
+
+	while (n < 98)
 	{
-		_putchar(n);
-		_putchar(',');
-		_putchar(' ');
-		_putchar('\n');
+		printf("%d, ", n);
+		n++;
+	}
+	while (n > 98)
+	{
+		printf("%d, ", n);
+		n--;
+	}
+	if (n == 98)
+	{
+		printf("%d\n", n);
 	}
 }
