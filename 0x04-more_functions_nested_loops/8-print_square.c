@@ -2,6 +2,7 @@
 /**
   * print_square - print square
   * @size: size of square
+  * void: none
   */
 void print_square(int size)
 {
@@ -11,7 +12,7 @@ void print_square(int size)
 	{
 		_putchar('\n');
 	}
-	 for (i = 1; i <= size ; i++)
+	for (i = 1; i <= size ; i++)
 	{
 		for (j = 1 ; j <= size; j++)
 		{
