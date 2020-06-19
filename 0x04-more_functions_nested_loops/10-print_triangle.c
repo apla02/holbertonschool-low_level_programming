@@ -2,8 +2,6 @@
 /**
    * print_triangle - print a triangle
    * @size: size of triangle
-   * @s: spaces of the triangle
-   * @n: numerals of the triangle
    */
 void print_triangle(int size)
 {
@@ -17,7 +15,7 @@ void print_triangle(int size)
 	while (n < size)
 	{
 		s = (size - 1);
-		while (s > n )
+		while (s > n)
 		{
 			_putchar (' ');
 			s--;
