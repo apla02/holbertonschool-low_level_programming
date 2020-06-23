@@ -1,7 +1,7 @@
 #include "holberton.h"
 /**
- * print_rev - writes the string in reverse
- * @s: string
+ * puts2 - writes the string in reverse
+ * @str: string
  */
 void puts2(char *str)
 {
