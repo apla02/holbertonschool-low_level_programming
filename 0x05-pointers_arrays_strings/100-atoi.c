@@ -9,7 +9,7 @@
 int _atoi(char *s)
 {
 	int sign = 0;
-	unsigned int n;
+	unsigned int num = 0;
 
 	while (*s != '\0')
 	{
@@ -17,11 +17,11 @@ int _atoi(char *s)
 		{
 			sign++;
 		}
-		else if (*s >= 0 && *s <= 9)
+		if (*s >= '0' && *s <= '9')
 		{
-		n = (n * 10) + (*s - '0');
+		num = (num * 10) + (*s - '0');
 		}
-		else if (r > 0)
+		if (*s == ';')
 		{
 			break;
 		}
@@ -29,7 +29,7 @@ int _atoi(char *s)
 	}
 	if (sign % 2 != 0)
 	{
-		return (n * (-1));
-		return (n);
+		return (num * (-1));
 	}
+		return (num);
 }
