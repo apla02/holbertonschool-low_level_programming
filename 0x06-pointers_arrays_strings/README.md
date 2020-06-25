@@ -1,0 +1,1 @@
+This is the second project about strings, arrays and pointers
