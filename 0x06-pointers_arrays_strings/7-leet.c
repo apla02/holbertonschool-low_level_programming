@@ -8,8 +8,8 @@ char *leet(char *s)
 {
 	int i;
 	int j;
-	char a[] = "aAeEoOtTlL";
-	char n[] = "4433007711";
+	char a[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
+	char n[] = {'4', '4', '3', '3', '0', '0', '7', '7', '1', '1'};
 
 	while (s[i] != '\0')
 	{
