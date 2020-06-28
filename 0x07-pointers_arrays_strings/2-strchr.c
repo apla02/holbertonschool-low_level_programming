@@ -1,4 +1,5 @@
 #include "holberton.h"
+#include <stdlib.h>
 /**
 * _strchr -  function to copy the memory to  a string
 * @s: string source
@@ -15,5 +16,5 @@ char *_strchr(char *s, char c)
 		return (s);
 	}
 	}
-	return (s);
+	return ('\0');
 }
