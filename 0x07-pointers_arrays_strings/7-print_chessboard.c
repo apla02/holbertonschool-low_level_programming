@@ -2,8 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
-* _strstr -  search a string for a set of bytes
-* @chessboard:function for print a chessboard
+* print_chessboard - function for print a chessboard
 * @a: pointer to chess
 * Return: void
 */
