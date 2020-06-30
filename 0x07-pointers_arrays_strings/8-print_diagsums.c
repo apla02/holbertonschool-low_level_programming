@@ -2,8 +2,9 @@
 #include <stdlib.h>
 #include <stdio.h>
 /**
-* print_chessboard - function for print a chessboard
+* print_diagsums - function for print a chessboard
 * @a: pointer to chess
+* @size: tamaño square
 * Return: void
 */
 void print_diagsums(int *a, int size)
@@ -12,15 +13,15 @@ void print_diagsums(int *a, int size)
 
 	m = size * size;
 	for (i = 0; i < m; i++)
-	{ 
-			if (i % (size + 1) == 0)
-			{
-				suma1 += a[i];
-			}
+	{
+		if (i % (size + 1) == 0)
+		{
+			suma1 += a[i];
+		}
 	}
 	for (i = m - size ; i > 0; i--)
 	{
-		if ( i % (size - 1) == 0)
+		if (i % (size - 1) == 0)
 		{
 			suma2 += a[i];
 		}
