@@ -8,3 +8,4 @@ int is_prime_number(int n);
 int is_palindrome(char *s);
 int _putchar(char c);
 int raiz( int n, int a);
+int primo(int n, int i);
