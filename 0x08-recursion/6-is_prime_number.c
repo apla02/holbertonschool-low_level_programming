@@ -1,6 +1,6 @@
 #include "holberton.h"
 /**
-* _is_prime_number -  function
+* is_prime_number -  function
 * @n: base
 * Return: no zero
 */
