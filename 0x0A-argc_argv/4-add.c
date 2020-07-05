@@ -16,39 +16,28 @@ int main(int argc, char *argv[])
 	for (i = 1; i < argc; i++)
 	{
 		if ((atoi(argv[i]) == '\0') && j < argc)
-		{
 			j++;
-			
-		}
 		else
 		{
 			if (atoi(argv[i]) > 0)
-			{
 				suma = suma + atoi(argv[i]);
-			}
 			else
 			{
 				j = -1;
-				break;				
+				break;
 			}
 		}
 	}
 	if (j == 0)
-	{
 		printf("%d\n", suma);
-	}
 	else
 	{
 		if (j == argc - 1)
-		{
 			printf("0\n");
-		}
 		else
 		{
-			if(j == -1)
-			{
+			if (j == -1)
 				printf("Este programa solo puede sumar números positivos\n");
-			}
 			else
 			{
 				printf("Error\n");
