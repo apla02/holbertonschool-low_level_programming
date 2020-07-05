@@ -10,20 +10,16 @@
 int main(int argc, char *argv[])
 {
 	int resultado = 0;
-	int n1 = 0;
-	int n2 = 0;
 
 	if (argc == 3)
 		{
-		n1 = atoi(argv[1]);
-		n2 = atoi(argv[2]);
-		resultado = resultado + (n1 * n2);
+		resultado = resultado + (atoi(argv[1]) * atoi(argv[2]));
 		printf("%d\n", resultado);
 		}
 
 	else
 		{
-			printf("error\n");
+			printf("Error\n");
 			return (1);
 		}
 	return (0);
