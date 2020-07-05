@@ -10,7 +10,7 @@
 int main(int argc, char *argv[])
 {
 	int suma = 0;
-	int i;
+	int i = 0;
 	int j = 0;
 
 	for (i = 1; i < argc; i++)
@@ -36,9 +36,7 @@ int main(int argc, char *argv[])
 			printf("0\n");
 		else
 		{
-			if (j == -1)
-				printf("Este programa solo puede sumar números positivos\n");
-			else
+			if (j != -1)
 			{
 				printf("Error\n");
 				return (1);
