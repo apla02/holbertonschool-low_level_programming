@@ -15,18 +15,10 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		if ((atoi(argv[i]) == '\0') && j < argc)
+		if (((atoi(argv[i]) == '\0') && j < argc) || (atoi(argv[i]) < 0))
 			j++;
-		else
-		{
-			if (atoi(argv[i]) > 0)
-				suma = suma + atoi(argv[i]);
-			else
-			{
-				j = -1;
-				break;
-			}
-		}
+		if (atoi(argv[i]) > 0)
+			suma = suma + atoi(argv[i]);
 	}
 	if (j == 0)
 		printf("%d\n", suma);
@@ -36,7 +28,6 @@ int main(int argc, char *argv[])
 			printf("0\n");
 		else
 		{
-			if (j != -1)
 			{
 				printf("Error\n");
 				return (1);
