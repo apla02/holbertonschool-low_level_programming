@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include "holberton.h"
 /**
-* _strdup - function to create an array of characters
-* @str: size of variable type int
+* _strdup - function
+* @str: string type char
 * Return: p or NULL
 */
 char *_strdup(char *str)
@@ -15,15 +15,16 @@ char *_strdup(char *str)
 	{
 	return (NULL);
 	}
-	for (i = 0; *(str + i); i++)
 
+	for (i = 0; *(str + i); i++)
+	{
+	}
 	dest = malloc(sizeof(char) * (i + 1));
 
 	if (dest == NULL)
 	{
 	return (NULL);
 	}
-
 	for (j = 0; j <= i ; j++)
 	{
 		*(dest + j) = *(str + j);
