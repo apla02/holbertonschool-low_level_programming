@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "holberton.h"
 /**
-* alloc_grid - function to concatenate 2 strings
+* alloc_m - function to concatenate 2 strings
 * @width: ancho
 * @height: largo
 * Return:  or NULL
@@ -28,7 +28,10 @@ int **alloc_grid(int width, int height)
 		m[i] = malloc(width * sizeof(int));
 		if (m == NULL)
 		{
-
+			for (j = i - 1; j >= 0; j--)
+			{
+				free(m[i]);
+			}
 			free(m);
 			return (NULL);
 			return (m);
