@@ -12,9 +12,14 @@ char *str_concat(char *s1, char *s2)
 	unsigned int l1, l2;
 	char *s3;
 
-	if (s1 == NULL && s2 == NULL)
+	if (s1 == NULL)
 	{
-	return (" ");
+		s1 = "";
+	}
+
+	if (s2 == NULL)
+	{
+		s2 = "";
 	}
 
 	for (l1 = 0; *(s1 + l1); l1++)
