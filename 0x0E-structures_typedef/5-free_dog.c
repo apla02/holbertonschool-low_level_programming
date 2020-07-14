@@ -1,4 +1,6 @@
-#include "holberton.h"
+#include "dog.h"
+#include <stdio.h>
+#include <stdlib.h>
 /**
 * free_dog - function
 * @d : pointer to estructure
@@ -6,6 +8,10 @@
 void free_dog(dog_t *d)
 {
 	if (d == NULL)
-	free(d);
-	return (NULL);
+	{
+		free(d->name);
+		free(d->owner);
+		free(d);
+		return;
+	}
 }
