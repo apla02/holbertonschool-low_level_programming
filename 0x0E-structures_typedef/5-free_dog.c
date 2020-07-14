@@ -3,11 +3,12 @@
 #include <stdlib.h>
 /**
 * free_dog - function
-* @d : pointer to estructure
+* @d: pointer to estructure
+* Return: no return
 */
 void free_dog(dog_t *d)
 {
-	if (d == NULL)
+	if (d)
 	{
 		free(d->name);
 		free(d->owner);
