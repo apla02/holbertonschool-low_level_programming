@@ -7,7 +7,7 @@
 */
 void print_all(const char * const format, ...)
 {
-	int i = 0;
+	unsigned int i = 0;
 	char *str;
 	va_list flist;
 
@@ -17,7 +17,7 @@ void print_all(const char * const format, ...)
 		switch (format[i++])
 		{
 			case 'c':
-				printf("%c", (char)va_arg(flist, int));
+				printf("%c", va_arg(flist, int));
 				break;
 			case 'i':
 				printf("%d", va_arg(flist, int));
@@ -29,7 +29,7 @@ void print_all(const char * const format, ...)
 				str = va_arg(flist, char *);
 				if (str == NULL)
 				{
-					str = "nil";
+					str = "(nil)";
 				}
 				printf("%s", str);
 				break;
