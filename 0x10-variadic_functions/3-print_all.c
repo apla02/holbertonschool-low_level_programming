@@ -12,7 +12,7 @@ void print_all(const char * const format, ...)
 	va_list flist;
 
 	va_start(flist, format);
-	while (format[i])
+	while (format[i] != '\0')
 	{
 		switch (format[i])
 		{
