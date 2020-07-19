@@ -7,26 +7,23 @@
 */
 void print_all(const char * const format, ...)
 {
-	int i = 0, j = 0;
+	int i = 0;
 	char *str;
 	va_list flist;
 
 	va_start(flist, format);
 	while (format && format[i])
 	{
-		switch (format[i])
+		switch (format[i++])
 		{
 			case 'c':
 				printf("%c", (char)va_arg(flist, int));
-				j = 1;
 				break;
 			case 'i':
 				printf("%d", va_arg(flist, int));
-				j = 1;
 				break;
 			case 'f':
 				printf("%f", (float)va_arg(flist, double));
-				j = 1;
 				break;
 			case 's':
 				str = va_arg(flist, char *);
@@ -35,15 +32,12 @@ void print_all(const char * const format, ...)
 					str = "nil";
 				}
 				printf("%s", str);
-				j = 1;
 				break;
 			default:
-				j = 0;
-				break;
+				continue;
 		}
-		if (j == 1 && format[i + 1] != '\0')
+		if (format[i])
 			printf(", ");
-	i++;
 	}
 	printf("\n");
 	va_end(flist);
