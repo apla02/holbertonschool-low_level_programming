@@ -31,10 +31,11 @@ void print_all(const char * const format, ...)
 			case 's':
 				str = va_arg(flist, char *);
 				if (str == NULL)
-					printf("(nil)");
-				else
-					printf("%s", str);
-				break;
+					{
+						printf("(nil)");
+						break;
+					}
+				printf("%s", str);
 			default:
 				j = 0;
 				break;
