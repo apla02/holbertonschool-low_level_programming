@@ -12,7 +12,7 @@ void print_all(const char * const format, ...)
 	va_list flist;
 
 	va_start(flist, format);
-	while (format[i])
+	while (format[i] && format)
 	{
 		switch (format[i])
 		{
@@ -33,7 +33,6 @@ void print_all(const char * const format, ...)
 				if (str == NULL)
 				{
 					printf("(nil)");
-					break;
 				}
 				printf("%s", str);
 				break;
