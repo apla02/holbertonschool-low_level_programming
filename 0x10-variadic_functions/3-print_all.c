@@ -7,7 +7,7 @@
 */
 void print_all(const char * const format, ...)
 {
-	unsigned int i = 0, j = 0;
+	int i = 0, j = 0;
 	char *str;
 	va_list flist;
 
