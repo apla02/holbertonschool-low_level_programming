@@ -43,6 +43,6 @@ void print_all(const char * const format, ...)
 			printf(", ");
 	i++;
 	}
-	va_end(flist);
 	printf("\n");
+	va_end(flist);
 }
