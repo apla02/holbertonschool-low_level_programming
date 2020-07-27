@@ -13,11 +13,8 @@ size_t print_listint(const listint_t *h)
 
 	for (index = 0; h; index++)
 	{
-		if (h->n)
-		{
-			printf("%d\n", h->n);
-			h = h->next;/*update the adress of pointer to h->next : NULL ?*/
-		}
+		printf("%d\n", h->n);
+		h = h->next;/*update the adress of pointer to h->next t*/
 	}
 	return (index);
 }
