@@ -8,15 +8,13 @@ size_t listint_len(const listint_t *h)
 {
 	size_t index = 0;/* counts the number of nodes*/
 
-	if (h == 0)
+	if (h == '\0')
 		return (0);
 
-	for (index = 0; h; index++)
+	while (h)
 	{
-		if (h->n)
-		{
-			h = h->next;/*update the adress of pointer to h->next : change the member into the structure ?*/
-		}
+		h = h->next;/*update the adress of pointer to h->next */
+		index++;
 	}
 	return (index);
 }
