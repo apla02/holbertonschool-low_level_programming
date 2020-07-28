@@ -27,8 +27,8 @@ unsigned int len(listint_t *h)
 int delete_nodeint_at_index(listint_t **head, unsigned int index)
 {
 	unsigned int len_n;
-	len_n = len(*head);
 
+	len_n = len(*head);
 	if (head && *head && index <= len_n)
 	{
 		listint_t *siguiente;
