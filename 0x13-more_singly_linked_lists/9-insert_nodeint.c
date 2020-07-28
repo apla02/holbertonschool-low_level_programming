@@ -12,15 +12,24 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	listint_t *ptr = NULL;/** pointer to traverse the list*/
 	listint_t *new = NULL;
 
+	ptr = *head;
 	new = (listint_t *)malloc(sizeof(listint_t));
 	if (new == NULL)
 		return (NULL);
-	ptr = *head;
+	if (idx == 0)
+	{
+		new = *head;
+		new->n = n;
+		new->next = (*head)->next;
+		return (new);
+	}
 	while (ptr && i < idx - 1)
 	{
 		ptr = ptr->next;
 		i++;
 	}
+	if (ptr == NULL)
+		return (NULL);
 	new->next = ptr->next;
 	ptr->next = new;
 	new->n = n;
