@@ -6,7 +6,7 @@
  */
 int pop_listint(listint_t **head)
 {
-	listint_t *ptr = NULL;
+	listint_t *ptr;
 	int data;
 
 	data = (*head)->n;
