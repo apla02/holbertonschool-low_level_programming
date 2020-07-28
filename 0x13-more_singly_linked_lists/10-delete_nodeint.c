@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * listint_len - print all the elements of a listint_t list.
+ * len - print all the elements of a listint_t list.
  * @h: pointer to strcutur listint_t
  * Return: the numbers of nodes
  */
