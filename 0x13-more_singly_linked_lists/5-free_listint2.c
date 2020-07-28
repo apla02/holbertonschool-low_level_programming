@@ -6,9 +6,8 @@
  */
 void free_listint2(listint_t **head)
 {
-	listint_t *ptr;
+	listint_t *ptr = (*head)->next;
 
-	ptr = (*head)->next;
 	while (head && *head)
 	{
 		ptr = (*head)->next;
