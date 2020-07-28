@@ -6,15 +6,16 @@
  */
 size_t print_listint(const listint_t *h)
 {
+	const listint_t *ptr;
 	size_t index = 0;/* counts the number of nodes*/
 
 	if (h == '\0')
-		return (-1);
-
-	for (index = 0; h; index++)
+		return (0);
+	ptr = h;
+	for (index = 0; ptr; index++)
 	{
-		printf("%d\n", h->n);
-		h = h->next;/*update the adress of pointer to h->next t*/
+		printf("%d\n", ptr->n);
+		ptr = ptr->next;/*update the adress of pointer to h->next t*/
 	}
 	return (index);
 }
