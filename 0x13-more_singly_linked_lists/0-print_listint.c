@@ -8,8 +8,8 @@ size_t print_listint(const listint_t *h)
 {
 	size_t index = 0;/* counts the number of nodes*/
 
-	if (h == 0)
-		return (0);
+	if (h == '\0')
+		return (-1);
 
 	for (index = 0; h; index++)
 	{
