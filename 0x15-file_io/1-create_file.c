@@ -11,7 +11,6 @@ int create_file(const char *filename, char *text_content)
 	char *buffer;
 	int size = 0;
 	int  byt_read;
-	int byt_writ;
 
 	if (filename == NULL)
 		return (-1);
@@ -22,7 +21,7 @@ int create_file(const char *filename, char *text_content)
 	{
 		size++;
 	}
-	buffer = malloc(sizeof(char) * (size + 1));
+	buffer = malloc(sizeof(char) * (size));
 	if (buffer == NULL)
 		return (0);
 	byt_read = read(fd, buffer, size);
@@ -31,12 +30,7 @@ int create_file(const char *filename, char *text_content)
 		free(buffer);
 		return (-1);
 	}
-	byt_writ = write(STDOUT_FILENO, buffer, (size));
-	if (byt_writ == -1)
-	{
-		free(buffer);
-		return (-1);
-	}
+
 	close(fd);
 	free(buffer);
 	return (1);
