@@ -20,17 +20,13 @@ int main(int ac, char *av[])
 	fd_to = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fd_to == -1)
 		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
-	while (1)
+	while (read_from = read(fd_from, buffer, BUFFLEN))
 	{
-		read_from = read(fd_from, buffer, BUFFLEN);
 		if (read_from == -1)
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]), exit(98);
-		if (read_from < BUFFLEN)
-			write_to = write(STDOUT_FILENO, buffer, read_from);
-			if (write_to == -1)
-				dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
-			break;
 		write_to = write(STDOUT_FILENO, buffer, read_from);
+		if (write_to == -1)
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]), exit(99);
 	}
 
 	close_from = close(fd_from);
