@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * print_dlistint - function to print a doubly linked list
+ * dlistint_len - function to print a doubly linked list
  * @h: pointer to structure
  * Return: an integer
  */
