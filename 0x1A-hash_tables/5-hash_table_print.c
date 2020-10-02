@@ -23,11 +23,11 @@ void hash_table_print(const hash_table_t *ht)
 
 			while (ptr)
 			{
-				if (flag > 0)
+				if (flag == 1)
 					printf(", ");
 				printf("'%s': '%s'", ptr->key, ptr->value);
 				ptr = ptr->next;
-				flag++;
+				flag = 1;
 			}
 		}
 		index++;
