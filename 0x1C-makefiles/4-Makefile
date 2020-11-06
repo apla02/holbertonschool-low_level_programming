@@ -1,17 +1,15 @@
-# makefile with all content using variables
-
 CC = gcc
 SRC = main.c holberton.c
-OBJ = $(SRC:%.c=%.o)
+OBJ = $(SRC:%.c=%.o) 
 NAME = holberton
 RM = rm -f
 CFLAGS = -Wall -Werror -Wextra -pedantic
 
 all: $(OBJ)
-        $(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
 clean:
-        $(RM) *~ $(NAME)
-oclean:
-        $(RM) $(OBJ)
+	$(RM) *~ $(NAME)
+oclean: 
+	$(RM) $(OBJ)
 fclean: clean oclean
-re: oclean all
+re: clean all
